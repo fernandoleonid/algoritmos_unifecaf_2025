@@ -1,4 +1,4 @@
-a = 1
-b = 3
+a = int(input("Digite um número: "))
+b = int(input("Digite outro número: "))
 r = a + b
-print (r)
+print (f"A soma dos números é: {r}")
