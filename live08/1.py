@@ -14,5 +14,7 @@ clientes = ["Ana", "Hugo", "Maria", "Felipe","Pedro"]
 #     print (f"O nome do cliente é: {clientes[contador]}")
 #     contador += 1
 
+clientes[1] = "Fernando Leonid"
+
 for cliente in clientes:
     print (f"O nome do cliente é: {cliente}")
