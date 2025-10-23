@@ -1,6 +1,6 @@
 opcao = ""
 
-while opcao != 0:
+while opcao != "0":
     print ("Menu de opções:")
     print ("1 - Para Mostrar o nome da Faculdade")
     print ("2 - Para Mostrar o nome da Disciplina")
