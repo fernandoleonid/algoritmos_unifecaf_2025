@@ -3,8 +3,8 @@
 # --> Indexadas
 # --> Ordenadas
 
-numeros = ("Uva", "Morando", "Banana")
+frutas = ("Uva", "Morando", "Banana")
 
-numeros[1]  = "Lima"
+frutas[1]  = "Lima"
 
 print (numeros)
