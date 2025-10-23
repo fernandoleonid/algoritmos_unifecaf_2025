@@ -7,6 +7,7 @@
 # -> Indexadas
 
 clientes = ["Ana", "Hugo", "Maria", "Felipe","Pedro"]
+idades = [12, 43, 32, 45, 90, 2]
 
 # contador = 0
 # limite = len(clientes)

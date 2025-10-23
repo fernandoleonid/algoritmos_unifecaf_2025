@@ -7,4 +7,4 @@ frutas = ("Uva", "Morando", "Banana")
 
 frutas[1]  = "Lima"
 
-print (numeros)
+print (frutas)
