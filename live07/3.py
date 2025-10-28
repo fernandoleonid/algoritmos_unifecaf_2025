@@ -1,13 +1,9 @@
-senha_cadastrada = "123"
+# Sets
+# --> Mutáveis
+# --> Indexadas
+# --> Não são ordenas
+# --> Não permite elementos (itens) duplicados
 
-senha_digitada = input ("Digite sua senha: ")
-quantidade_tentativas = 1
+produtos = {"Mouse","Teclado","Mouse", "Monitor", "Mouse"}
 
-while senha_digitada != senha_cadastrada:
-    senha_digitada = input ("Senha Incorreta, tente novamente: ")
-    quantidade_tentativas += 1
-    if quantidade_tentativas >= 3:
-        print ("Usuário bloqueado por 5 minutos!")
-        exit()
-
-print ("Bem-vindo ao Sistema!!!")
+print (produtos)

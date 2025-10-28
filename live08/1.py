@@ -1,21 +1,35 @@
-# Estruturas de dados
-# Listas
-# -> Ordenadas
-# -> Mutáveis
-# -> Heterogênias
-# -> Tamanho flexivel
-# -> Indexadas
+banco_dados = [
+    {
+        "ra":"123",
+        "nome": "Fernando Leonid",
+        "notas": [5, 7, 9],
+        "email": "fernandoleonid@gmail.com"
+    }
+]
 
-clientes = ["Ana", "Hugo", "Maria", "Felipe","Pedro"]
-idades = [12, 43, 32, 45, 90, 2]
+def mostrar_menu():
+    print ("#"*30)
+    print ("1 - Mostrar nome Aluno")
+    print ("2 - Mostrar a notas do Aluno")
+    print ("3 - Mostrar situação do Aluno")
+    print ("0 - Sair do Sistema")
+    print ("#"*30)
 
-# contador = 0
-# limite = len(clientes)
-# while contador < limite:    
-#     print (f"O nome do cliente é: {clientes[contador]}")
-#     contador += 1
+def mostrar_nome ():
+    print ("Aluno: Fernando Leonid")
 
-clientes[1] = "Fernando Leonid"
 
-for cliente in clientes:
-    print (f"O nome do cliente é: {cliente}")
+resposta = ""
+while resposta != 0:
+    mostrar_menu()
+    resposta = int(input("Digite uma opção: "))
+    if ( resposta == 1):
+        mostrar_nome()
+    elif ( resposta == 2):
+        print ("Mostrando as notas do Aluno...")
+    elif ( resposta == 3):
+        print ("Mostrando a situação do Aluno...")
+    elif ( resposta == 0):
+        print ("Saindo do Sistema...")
+    else:
+        print ("Opção errada, tente novamente!")

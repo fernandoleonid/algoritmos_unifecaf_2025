@@ -1,10 +1,9 @@
-# input foi utilizado para capturar a entrad
-# do usuário
-# o int foi utilizado para converter string
-# em inteiro
-a = int(input("Digite um número: "))
-# a variável b foi criada para armazenar
-# o segundo número
-b = int(input("Digite outro número: "))
-r = a + b
-print (f"A soma dos números é: {r}")
+# Crie um programa que liste  
+# os 10 primeiros pares
+
+contador = 1
+while contador <= 10:
+    print (contador * 2)
+    contador += 1
+    print ("estou dentro do while")
+print ("estou fora do while")

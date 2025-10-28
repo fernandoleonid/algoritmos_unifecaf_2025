@@ -1,9 +1,21 @@
-# Crie um programa que liste  
-# os 10 primeiros pares
+# Estruturas de dados
+# Listas
+# -> Ordenadas
+# -> Mutáveis
+# -> Heterogênias
+# -> Tamanho flexivel
+# -> Indexadas
 
-contador = 1
-while contador <= 10:
-    print (contador * 2)
-    contador += 1
-    print ("estou dentro do while")
-print ("estou fora do while")
+clientes = ["Ana", "Hugo", "Maria", "Felipe","Pedro"]
+idades = [12, 43, 32, 45, 90, 2]
+
+# contador = 0
+# limite = len(clientes)
+# while contador < limite:    
+#     print (f"O nome do cliente é: {clientes[contador]}")
+#     contador += 1
+
+clientes[1] = "Fernando Leonid"
+
+for cliente in clientes:
+    print (f"O nome do cliente é: {cliente}")
