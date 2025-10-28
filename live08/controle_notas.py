@@ -1,11 +1,11 @@
-banco_dados = [
-    {
-        "ra":"123",
-        "nome": "Fernando Leonid",
-        "notas": [5, 7, 9],
-        "email": "fernandoleonid@gmail.com"
-    }
-]
+import os
+from aluno import *
+
+def limpar_tela():
+    os.system('cls')
+
+def pausar():
+    input ("Digite ENTER para continuar...")
 
 def mostrar_menu():
     print ("#"*30)
@@ -15,20 +15,23 @@ def mostrar_menu():
     print ("0 - Sair do Sistema")
     print ("#"*30)
 
-def mostrar_nome ():
-    print ("Aluno: Fernando Leonid")
-
 
 resposta = ""
 while resposta != 0:
     mostrar_menu()
     resposta = int(input("Digite uma opção: "))
     if ( resposta == 1):
+        limpar_tela()
         mostrar_nome()
+        pausar()
     elif ( resposta == 2):
-        print ("Mostrando as notas do Aluno...")
+        limpar_tela()
+        mostrar_notas()
+        pausar()
     elif ( resposta == 3):
-        print ("Mostrando a situação do Aluno...")
+        limpar_tela()
+        mostrar_situacao()
+        pausar()
     elif ( resposta == 0):
         print ("Saindo do Sistema...")
     else:
