@@ -2,8 +2,14 @@ import os
 from colorama import init, Fore
 
 lista_tarefas = [
-    "Estudar Python",
-    "Correr"
+    {
+        "tarefa":"Estudar Python",
+        "data":"31/10/2025"
+    },
+    {
+        "data": "30/10/2025",
+        "tarefa":"Correr"
+    }
 ]
 
 init(autoreset=True)
