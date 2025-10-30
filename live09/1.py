@@ -1,7 +1,10 @@
 import os
 from colorama import init, Fore
 
-lista_tarefas = []
+lista_tarefas = [
+    "Estudar Python",
+    "Correr"
+]
 
 init(autoreset=True)
 
@@ -18,7 +21,7 @@ def adicionar_tarefa():
 
 def exibir_tarefas():
     for tarefa in lista_tarefas:
-        print (f"{Fore.GREEN1}--> {tarefa}")
+        print (f"{Fore.GREEN}--> {tarefa}")
 
 def exibir_menu ():
     limpar_tela()
@@ -39,8 +42,11 @@ while resposta != "0":
         pausar()
     elif ( resposta == "2"):
         exibir_tarefas()
+        pausar()
     elif ( resposta == "3"):
-        print ("Removendo tarefaa")
+        exibir_tarefas()
+        tarefa = input ("Digite a tarefa para excluir: ")
+        lista_tarefas.remove(tarefa)
     elif ( resposta == "0"):
         print ("Saindo do sistema")
     else:
