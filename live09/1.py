@@ -1,0 +1,47 @@
+import os
+from colorama import init, Fore
+
+lista_tarefas = []
+
+init(autoreset=True)
+
+def limpar_tela():
+    os.system("cls")
+
+def pausar():
+    input ("Aperte ENTER para continuar...")
+
+def adicionar_tarefa():
+    nova_tarefa = input ("Digite a sua nova tarefa: ")
+    lista_tarefas.append(nova_tarefa)
+    print (f"{Fore.MAGENTA}Tarefa adicionada com sucesso!!!")
+
+def exibir_tarefas():
+    for tarefa in lista_tarefas:
+        print (f"{Fore.GREEN1}--> {tarefa}")
+
+def exibir_menu ():
+    limpar_tela()
+    print (f"{Fore.BLUE}####### MENU #######")
+    print ("1 - Adicionar Tarefa")
+    print ("2 - Exibir Tarefa")
+    print ("3 - Remover Tarefa")
+    print ("0 - Sair")
+    print (f"{Fore.BLUE}#"*20)
+
+resposta = ""
+while resposta != "0":
+    exibir_menu()
+    resposta = input ("Escolha um opção: ")
+    if ( resposta == "1"):
+        limpar_tela()
+        adicionar_tarefa()
+        pausar()
+    elif ( resposta == "2"):
+        exibir_tarefas()
+    elif ( resposta == "3"):
+        print ("Removendo tarefaa")
+    elif ( resposta == "0"):
+        print ("Saindo do sistema")
+    else:
+        print ("Opção invalida, tente novamente!")
