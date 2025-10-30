@@ -22,7 +22,13 @@ def pausar():
 
 def adicionar_tarefa():
     nova_tarefa = input ("Digite a sua nova tarefa: ")
-    lista_tarefas.append(nova_tarefa)
+    data_tarefa = input ("Digite a data para a Tarefa: ")
+
+    tarefa = {
+        "tarefa": nova_tarefa,
+        "data": data_tarefa
+    }
+    lista_tarefas.append(tarefa)
     print (f"{Fore.MAGENTA}Tarefa adicionada com sucesso!!!")
 
 def exibir_tarefas():
