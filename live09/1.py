@@ -1,6 +1,9 @@
 import os
 from colorama import init, Fore
 
+from datetime import datetime
+
+
 lista_tarefas = [
     {
         "tarefa":"Estudar Python",
@@ -20,6 +23,7 @@ def limpar_tela():
 def pausar():
     input ("Aperte ENTER para continuar...")
 
+
 def adicionar_tarefa():
     nova_tarefa = input ("Digite a sua nova tarefa: ")
     data_tarefa = input ("Digite a data para a Tarefa: ")
@@ -34,6 +38,11 @@ def adicionar_tarefa():
 def exibir_tarefas():
     for tarefa in lista_tarefas:
         print (f"{Fore.GREEN}--> {tarefa}")
+
+def exibir_tarefas_numeras():
+    for indice, tarefa in enumerate(lista_tarefas):
+        print (f"{Fore.GREEN} {indice} --> {tarefa}")
+
 
 def exibir_menu ():
     limpar_tela()
@@ -56,9 +65,9 @@ while resposta != "0":
         exibir_tarefas()
         pausar()
     elif ( resposta == "3"):
-        exibir_tarefas()
-        tarefa = input ("Digite a tarefa para excluir: ")
-        lista_tarefas.remove(tarefa)
+        exibir_tarefas_numeras()
+        numero_tarefa = int(input ("Digite o número da tarefa para excluir: "))
+        lista_tarefas.pop(numero_tarefa)
     elif ( resposta == "0"):
         print ("Saindo do sistema")
     else:
